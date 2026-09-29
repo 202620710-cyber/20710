@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174c3a">
+  <title>오늘의 급식 | 부산기계공업고등학교</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="school-mark" href="#main" aria-label="급식 조회 홈">
+        <span class="mark-icon" aria-hidden="true">食</span>
+        <span><strong>부산기계공업고등학교</strong><small>오늘의 식단</small></span>
+      </a>
+      <span class="live-label"><i></i> NEIS 급식 정보</span>
+    </header>
+
+    <section class="intro" id="main" aria-labelledby="page-title">
+      <p class="eyebrow">SCHOOL MEAL</p>
+      <h1 id="page-title">오늘 뭐 먹지?</h1>
+      <p class="intro-copy">날짜를 선택해 부산기계공업고등학교 급식 메뉴를 확인하세요.</p>
+    </section>
+
+    <section class="meal-app" aria-label="급식 조회">
+      <div class="date-controls">
+        <button class="icon-button" id="previousDay" type="button" aria-label="전날">‹</button>
+        <label class="date-label" for="mealDate">조회 날짜</label>
+        <input id="mealDate" type="date" aria-label="급식 날짜 선택">
+        <button class="icon-button" id="nextDay" type="button" aria-label="다음 날">›</button>
+        <button class="today-button" id="todayButton" type="button">오늘</button>
+      </div>
+
+      <div class="meal-tabs" id="mealTabs" role="tablist" aria-label="끼니" hidden></div>
+
+      <article class="meal-card" aria-live="polite" aria-busy="false">
+        <div class="status" id="mealStatus">급식 정보를 불러오는 중입니다…</div>
+        <div class="meal-content" id="mealContent" hidden>
+          <div class="meal-heading">
+            <div>
+              <p class="meal-date" id="mealDateLabel"></p>
+              <h2 id="mealName">중식</h2>
+            </div>
+            <div class="calorie-badge" id="calories"></div>
+          </div>
+          <ul class="menu-list" id="menuList"></ul>
+          <div class="meal-foot" id="mealServings"></div>
+          <details class="extra-info" id="nutritionDetails" hidden>
+            <summary>영양 정보</summary>
+            <div id="nutritionInfo"></div>
+          </details>
+          <details class="extra-info" id="originDetails" hidden>
+            <summary>식재료 원산지</summary>
+            <div id="originInfo"></div>
+          </details>
+        </div>
+      </article>
+
+      <p class="allergen-note">
+        메뉴 옆 알레르기 번호를 확인하세요: 1 난류 · 2 우유 · 3 메밀 · 4 땅콩 · 5 대두 · 6 밀 · 7 고등어 · 8 게 · 9 새우 · 10 돼지고기 · 11 복숭아 · 12 토마토 · 13 아황산류 · 14 호두 · 15 닭고기 · 16 쇠고기 · 17 오징어 · 18 조개류
+      </p>
+    </section>
+
+    <footer class="site-footer">급식 정보 제공: 나이스 교육정보 개방 포털 · 메뉴 및 영양 정보는 학교 등록 내용에 따라 달라질 수 있습니다.</footer>
+  </main>
+</body>
+</html>
